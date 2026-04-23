@@ -5,7 +5,7 @@ This is the very difficult coding challenge for NodeJS.
 For this challenge you are allowed to use:
 
  - your computer of choice
- - Any 3rd party library
+ - any 3rd party library
  - the internet, but no AI!
 
 # 1 Git checkout
