@@ -18,15 +18,15 @@ Create a new branch named `log-server` from the main branch.
 
 # 3 Create a log server
 
-Create a server that logs all incoming requests to a file named `requests.log`. A log entry contains only of `LOG_LEVEL` and `LOG_MSG`. The log levels are: ["ERROR", "WARN", "INFO", "DEBUG"]. The server should listen on port 8080 and handle GET and POST requests. Implement this endpoints:
+Create a server that logs all incoming requests to a file named `requests.log`. A log entry contains only of `LOG_TIME`, `LOG_LEVEL` and `LOG_MSG`. The log levels are: ["ERROR", "WARN", "INFO", "DEBUG"]. The server should listen on port 8080 and handle GET and POST requests. Implement this endpoints:
 
 - GET `/`: Returns a JSON object with the last 20 entries from the `requests.log`.
-- POST `/log`: Adds a new line to the `requests.log` file. If the file dosn't exits yet, it should be created.
-- POST `/import`: Uploads an existing log file and adds its content to the `requests.log` file. The response should contain how many lines have been added and how many of them have been errors, warning, infos and debug messages. For testing you can use the `log_entries.txt` file from this repository.
+- POST `/log`: Adds a new line to the `requests.log` file. If the file dosn't exits yet, it should be created. The endpoint should accept a JSON object as input, representing a log entry.
+- POST `/import`: Uploads an existing log file and adds its content to the `requests.log` file. The response should contain how many lines have been added and how many of them have been errors, warning, infos and debug messages. For testing you can use the `logs_to_upload.txt` file from this repository.
 
 # 4 Add pagination
 
-The GET `/` endpoint should have pagination. 
+The GET `/` endpoint should have pagination.
 
 # 5 Test your server
 
